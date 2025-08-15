@@ -4,3 +4,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+input {
+  width: 40vh;
+  height: 5vh;
+  font-size: 32px;
+  border-radius: 3px;
+}

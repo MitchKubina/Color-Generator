@@ -13,13 +13,17 @@
         form {
             margin: 50px;
         }
+        input {
+            background-color: {{ textbox_color }};
+            border-radius:10px;
+        }
+
     </style>
 
 </head>
 <body>
     <form action = '/get_color' method = "POST">
         <div class = "centered">
-            <label for = "color">Color: </label>
             <input id = "name" name = "color" type = "text"/>
         </div>
     </form>

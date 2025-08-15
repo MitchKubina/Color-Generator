@@ -19,7 +19,8 @@ def get_color():
         print(name)
         r, g, b = predict_color(model, name)
         background_color = f"rgb({r}, {g}, {b})"
-        return render_template("index.html", background_color=background_color)
+        textbox_color = f"rgba({r}, {g}, {b}, 0.8)"
+        return render_template("index.html", background_color=background_color, textbox_color=textbox_color)
 
 
 model = load_model()
