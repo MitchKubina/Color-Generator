@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Color Generator</title>
+    
+    <style>
+        body {
+            background-color: {{ background_color }};
+        }
+        form {
+            margin: 50px;
+        }
+    </style>
+
 </head>
 <body>
-    <form>
-        <div class = "input">
-            <label>Color: </label>
-            <input type = "text" value = ""/>
+    <form action = '/get_color' method = "POST">
+        <div class = "centered">
+            <label for = "color">Color: </label>
+            <input id = "name" name = "color" type = "text"/>
         </div>
     </form>
 </body>
